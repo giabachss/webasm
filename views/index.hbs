@@ -1,0 +1,41 @@
+{{!-- table.table-primary.text-center.bg-light.mt-3.mb-3>tr*3>th*8 --}}
+<table class="table table-primary text-center bg-light mt-3 mb-3">
+    <tr>
+        <th class="h1 text text-danger" colspan="7">Mobile List ({{ total }})</th>
+        <th>
+            <a class="btn btn-success" href="/add">Add</a>
+            <a class="btn btn-danger" href="/drop"
+                onclick="return confirm('Are you sure to delete all mobiles ?');">Drop</a>
+        </th>
+    </tr>
+    <tr class="cot">
+        <th>Tên</th>
+        <th>Thương hiệu</th>
+        <th>Màu sắc</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Ảnh</th>
+        <th>Video</th>
+        <th style="color:brown">Menu</th>
+    </tr>
+    {{#each mobiles }}
+    <tr>
+        <th>{{ name }}</th>
+        <th>{{ brand }}</th>
+        <th>{{ color }}</th>
+        <th>{{ quantity }}</th>
+        <th>
+            <img class="zoom" src="{{ image }}">
+        </th>
+        <th>${{ price }}</th>
+        <th>
+            <iframe src="https://www.youtube.com/embed/{{ video }}" width="300" height="200"></iframe>
+        </th>
+        <th>
+            <a class="btn btn-warning" href="/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/delete/{{_id}}"
+                onclick="return confirm('Are you sure to delete this mobile ?');">Delete</a>
+        </th>
+    </tr>
+    {{/each}}
+</table>

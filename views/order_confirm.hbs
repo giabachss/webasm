@@ -1,0 +1,36 @@
+{{!-- div.col>div.row*2 --}}
+<div class="col">
+    <div class="row">
+        <h1 class="text text-primary text-center">MOBILE ORDER</h1>
+    </div>
+    <div class="row">
+        <table class="table table-bordered text-center">
+            <tr>
+                <th colspan="2">
+                    <img src="{{ mobile.image }}" width="300" height="300">
+                </th>
+            </tr>
+            <tr>
+                <th>Mobile name</th>
+                <th>{{ mobile.name }}</th>
+            </tr>
+            <tr>
+                <th>Mobile price</th>
+                <th>${{ mobile.price }}</th>
+            </tr>
+            <tr>
+                <th>Order quantity</th>
+                <th>{{ order_quantity }}</th>
+            </tr>
+            <tr>
+                <th>Total price</th>
+                <th>${{ total_price }}</th>
+            </tr>
+            <tr class="text-center">
+                <th colspan="2">
+                    <a class="btn btn-danger" href="/confirm">Confirm</a>
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>

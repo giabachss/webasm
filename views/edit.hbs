@@ -1,0 +1,38 @@
+<form class="bg-light text-center col-md-8" action="/edit/{{mobile._id}}" method="post">
+    <div>
+        <h1 class="text text-primary">Edit mobile</h1>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Name</label>
+        <input class="form-control" type="text" name="name" value="{{ mobile.name }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Brand</label>
+        <input class="form-control" type="text" name="brand" value="{{ mobile.brand }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Price</label>
+        <input class="form-control" type="text" name="price" value="{{ mobile.price }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Color</label>
+        <input class="form-control" type="text" name="color" value="{{ mobile.color }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Quantity</label>
+        <input class="form-control" type="number" name="quantity" value="{{ mobile.quantity }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Image</label><br>
+        <img src="{{ mobile.image}}" width="100" height="100"><br>
+        <input class="form-control" type="text" name="image" value="{{ mobile.image }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <label class="text text-success">Video</label><br>
+        <iframe src="https://www.youtube.com/embed/{{ mobile.video }}" width="200" height="150"></iframe>
+        <input class="form-control" type="text" name="video" value="{{ mobile.video }}" required>
+    </div>
+    <div class="form-group mt-3">
+        <input class="btn btn-danger" type="submit" value="Edit">
+    </div>
+</form>
