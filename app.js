@@ -12,11 +12,12 @@ var app = express();
 //1. khai báo thư viện mongoose để làm việc với DB
 var mongoose = require('mongoose');
 //2. khai báo đường dẫn của DB (URI)
-var local = "mongodb://localhost:27017/";
+// var local = "mongodb://localhost:27017/";
 var cloud = "mongodb+srv://bibibi2001bop:1234@cluster0.fpakzeo.mongodb.net/gch1102";
 //3. sử dụng mongoose để connect đến DB
 mongoose.connect(cloud)
 .then(() => { console.log ("Connect to DB succeed !")})
+.catch((err) => { console.error (err)});
 
 var bodyParser = require('body-parser');
 

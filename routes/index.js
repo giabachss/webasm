@@ -11,6 +11,19 @@ router.get('/', async (req, res) => {
   res.render('index', { mobiles : mobiles , total : total })
 })
 
+router.get('/about', (req, res) => {
+  res.render('about');
+})
+
+router.get('/contact', (req, res) => {
+  res.render('contact');
+})
+
+router.get('/shop', async (req, res) => {
+  var mobiles = await MobileModel.find({});
+  res.render('shop', { mobiles: mobiles });
+})
+
 router.get('/list', async (req, res) => {
   var mobiles = await MobileModel.find({});
   res.render('list', { mobiles: mobiles });
@@ -66,5 +79,6 @@ router.post('/edit/:id', async (req, res) => {
   .then(() => { console.log('Edit mobile succeed !') });
   res.redirect('/');
 })
+
 
 module.exports = router;
