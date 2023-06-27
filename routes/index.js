@@ -28,8 +28,8 @@ router.get('/', async (req, res) => {
   //res.send(mobiles);
   res.render('index', { mobiles : mobiles , total : total , layout: 'layout' })
 })
-
-router.get('/about',connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+//,connectEnsureLogin.ensureLoggedIn()
+router.get('/about', (req, res) => {
   res.render('about', {layout:'mylayout'});
 })
 
