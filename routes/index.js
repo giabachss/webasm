@@ -39,7 +39,8 @@ router.get('/contact', (req, res) => {
 
 router.get('/shop', async (req, res) => {
   var mobiles = await DroneModel.find({});
-  res.render('shop', { mobiles: mobiles, layout:'mylayout' });
+  var mobiles2 = await Drone2Model.find({});
+  res.render('shop', { mobiles: mobiles, mobiles2: mobiles2, layout:'mylayout' });
 })
 
 router.get('/list', async (req, res) => {

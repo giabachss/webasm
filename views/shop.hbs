@@ -32,6 +32,29 @@
                 </div>
             </div>
             {{/each}}
+            {{#each mobiles2 }}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="box">
+                    <a href="">
+                        <div class="img-box">
+                            <img src="{{ image }}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <a href="">
+                                {{name}}
+                            </a>
+                            <h6>
+                                {{price}} $
+                            </h6>
+                        </div>
+                        <button>
+                            <a href="/edit/{{_id}}"> Buy </a>
+            
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
         </div>
         
         <div class="btn-box">
