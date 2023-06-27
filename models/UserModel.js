@@ -9,8 +9,7 @@ var UserSchema = mongoose.Schema(
       admin_access: Number,
    }
 )
-UserSchema.plugin(passportLocalMongoose);
-var MobileModel = mongoose.model("user", UserSchema, "users");
-
+// UserSchema.plugin(passportLocalMongoose);
+var MobileModel = mongoose.model("user", UserSchema.plugin(passportLocalMongoose), "users");
 
 module.exports = MobileModel;

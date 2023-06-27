@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var MobileSchema = mongoose.Schema(
+var Drone2Schema = mongoose.Schema(
    {
       name: String,
       brand: String,
@@ -10,5 +10,5 @@ var MobileSchema = mongoose.Schema(
       price: Number
    }
 )
-var MobileModel = mongoose.model("DIEN THOAI", MobileSchema, "mobile");
-module.exports = MobileModel;
+var Drone2Model = mongoose.model("Drone", Drone2Schema, "drone2");
+module.exports = Drone2Model;
